@@ -11,7 +11,7 @@ const router = express.Router();
 
 router.post('/submit-feedback', submitFeedback);
 router.post('/admin/login', adminLogin);
-router.post('/feedbacks', authenticateAdmin, getFeedbacks);
+router.get('/feedbacks', authenticateAdmin, getFeedbacks);
 router.get('/check-auth', authenticateAdmin, checkAuth);
 
 export default router;
