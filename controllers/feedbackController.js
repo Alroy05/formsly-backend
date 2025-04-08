@@ -50,11 +50,11 @@ export const adminLogin = async (req, res) => {
       { expiresIn: '1h' }
     );
 
-    // Set cookie with the token
     res.cookie('token', token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      maxAge: 3600000,
+      secure: process.env.NODE_ENV === 'production', 
+      sameSite: 'none',
+      maxAge: 3600000, 
       path: '/',
     });
 
