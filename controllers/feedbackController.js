@@ -53,9 +53,8 @@ export const adminLogin = async (req, res) => {
     // Set cookie with the token
     res.cookie('token', token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production', // Use secure in production
-      sameSite: 'strict',
-      maxAge: 3600000, // 1 hour in milliseconds
+      secure: process.env.NODE_ENV === 'production',
+      maxAge: 3600000,
       path: '/',
     });
 

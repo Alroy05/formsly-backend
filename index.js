@@ -7,10 +7,6 @@ import feedbackRoutes from './routes/feedbackRoutes.js';
 
 const app = express();
 
-// Connect to Database
-connectDB();
-
-// Middleware
 app.use(cors({
   origin: process.env.CLIENT_URL || 'http://localhost:5173',
   credentials: true
